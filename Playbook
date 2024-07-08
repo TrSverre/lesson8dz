@@ -14,14 +14,14 @@
   - name: git clone 
     git:
      repo: 'https://github.com/jetty-project/embedded-jetty-live-war'
-     dest: /home/user/
+     dest: /home/user/build
   - name: building
     command: mvn package
     args:
-      chdir: /home/user/
+      chdir: /home/user/build
   - name: copy war
     fetch:
-      src: /home/user/git/livewar-assembly/target/livewar-example.war
+      src: /home/user/build/livewar-assembly/target/livewar-example.war
       dest: /home/user/livewar-example.war
       flat: true
 
