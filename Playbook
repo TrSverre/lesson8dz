@@ -11,9 +11,13 @@
       - maven
       - git
      state: present
+  - name: Delete content & directory
+    file:
+      state: absent
+      path: home/user/build
   - name: git clone
     git:
-        repo: https://github.com/yankils/hello-world.git
+        repo: https://github.com/jetty-project/embedded-jetty-live-war
         dest: /home/user/build
         update: yes
   - name: building
