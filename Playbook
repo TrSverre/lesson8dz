@@ -20,6 +20,7 @@
         repo: https://github.com/jetty-project/embedded-jetty-live-war
         dest: /home/user/build
         update: yes
+        version: jetty-11.0.x
   - name: building
     command: mvn package
     args:
