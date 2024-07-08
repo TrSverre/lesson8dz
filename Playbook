@@ -12,8 +12,8 @@
       - git
      state: present
   - name: git clone 
-    git:
-     repo: 'https://github.com/springhow/spring-boot-war-example.git'
+    ansible.builtin.git:
+     repo: https://github.com/springhow/spring-boot-war-example.git
      dest: /home/user/build
   - name: building
     command: mvn package
