@@ -13,7 +13,7 @@
      state: present
   - name: git clone 
     git:
-     repo: 'https://github.com/jetty-project/embedded-jetty-live-war'
+     repo: 'https://github.com/springhow/spring-boot-war-example.git'
      dest: /home/user/build
   - name: building
     command: mvn package
