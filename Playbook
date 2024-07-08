@@ -11,10 +11,11 @@
       - maven
       - git
      state: present
-  - name: git clone 
-    ansible.builtin.git:
-     repo: https://github.com/springhow/spring-boot-war-example.git
-     dest: /home/user/build
+  - name: git clone
+    git:
+        repo: https://github.com/yankils/hello-world.git
+        dest: /home/user/build
+        update: yes
   - name: building
     command: mvn package
     args:
